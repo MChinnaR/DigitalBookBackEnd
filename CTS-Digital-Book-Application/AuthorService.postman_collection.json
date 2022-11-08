@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "9895ecd4-6697-4d9d-a3fb-e25501e4dd3f",
+		"name": "AuthorService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": []
+		},
+		{
+			"name": "Create Account for Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"amer\",\r\n    \"email\":\"amer.java@gmail.com\",\r\n    \"password\":\"amer@1995\",\r\n    \"role\":[\"admin\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8999/api/v1/digitalbooks/author/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"api",
+						"v1",
+						"digitalbooks",
+						"author",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Author login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"amer\",\r\n    \"password\":\"amer@1995\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8999/api/v1/digitalbooks/author/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"api",
+						"v1",
+						"digitalbooks",
+						"author",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBookFromAuthor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tittle",
+							"value": "Do Good Be good",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Learn Valus",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "authorName",
+							"value": "Ramaraju",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Ram Publicashion",
+							"type": "text"
+						},
+						{
+							"key": "publisherDate",
+							"value": "2022-08-02",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Change the life of leving",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/digitalbooks/author/6/book/93",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"digitalbooks",
+						"author",
+						"6",
+						"book",
+						"93"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

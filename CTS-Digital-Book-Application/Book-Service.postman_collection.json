@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "f37f2e69-4b43-4a39-a0a5-501167134faf",
+		"name": "Book-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tittle",
+							"value": "Do Good Be good",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "Learn Valus",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "150000",
+							"type": "default"
+						},
+						{
+							"key": "authorName",
+							"value": "Ramaraju",
+							"type": "default"
+						},
+						{
+							"key": "publisher",
+							"value": "Ram Publicashion",
+							"type": "default"
+						},
+						{
+							"key": "publisherDate",
+							"value": "2022-08-02",
+							"type": "default"
+						},
+						{
+							"key": "active",
+							"value": "true",
+							"type": "default"
+						},
+						{
+							"key": "content",
+							"value": "Change the life of leving",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/E:/Photos/Edit Photos/Brahma.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8999/api/v1/digitalbook/237324657/book/79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"237324657",
+						"book",
+						"79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tittle",
+							"value": "Do Good Be good",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "Learn Valus",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "150000",
+							"type": "default"
+						},
+						{
+							"key": "authorName",
+							"value": "Ramaraju",
+							"type": "default"
+						},
+						{
+							"key": "publisher",
+							"value": "Ram Publicashion",
+							"type": "default"
+						},
+						{
+							"key": "publisherDate",
+							"value": "2022-08-02",
+							"type": "default"
+						},
+						{
+							"key": "active",
+							"value": "true",
+							"type": "default"
+						},
+						{
+							"key": "content",
+							"value": "Change the life of leving",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8999/api/v1/digitalbook/237324657/book/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"237324657",
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Based on Criteria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8999/api/v1/digitalbook/book/search/Learn Valus/150000/Ramaraju/Ram Publicashion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"book",
+						"search",
+						"Learn Valus",
+						"150000",
+						"Ramaraju",
+						"Ram Publicashion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

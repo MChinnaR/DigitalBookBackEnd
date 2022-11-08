@@ -1,0 +1,40 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: book-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/bookDB?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: root
+    password: pass@word1
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#server:
+#  port: 9000
+#spring:
+#  application:
+#    name: book-service
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/bookdb
+#    username: postgres
+#    password: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+                        
+  kafka:
+     producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: BOOK-SERVICE
+          uri: lb://BOOK-SERVICE
+          predicates:
+            - Path=/api/v1/digitalbook/**
+            
+        - id: AUTHOR-SERVICE
+          uri: lb://AUTHOR-SERVICE
+          predicates:
+            - Path=/api/v1/digitalbooks/author/**
+            
+        - id: READER-SERVICE
+          uri: lb://READER-SERVICE
+          predicates:
+            - Path=/api/v1/digitalbook/reader/**
+
+server:
+  port: 8999
+
+# Eureka Configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+

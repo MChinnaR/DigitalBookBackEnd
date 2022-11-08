@@ -1,0 +1,58 @@
+Microsoft Windows [Version 10.0.22000.978]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic  authorbookupdatetopic
+Exception in thread "main" joptsimple.UnrecognizedOptionException: zookeeper is not a recognized option
+        at joptsimple.OptionException.unrecognizedOption(OptionException.java:108)
+        at joptsimple.OptionParser.handleLongOptionToken(OptionParser.java:510)
+        at joptsimple.OptionParserState$2.handleArgument(OptionParserState.java:56)
+        at joptsimple.OptionParser.parse(OptionParser.java:396)
+        at kafka.admin.TopicCommand$TopicCommandOptions.<init>(TopicCommand.scala:567)
+        at kafka.admin.TopicCommand$.main(TopicCommand.scala:47)
+        at kafka.admin.TopicCommand.main(TopicCommand.scala)
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+Created topic test.
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic author-bookupdate-topic
+Created topic author-bookupdate-topic.
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-topics.bat --list --bootstrap-server localhost:9092
+author-bookupdate-topic
+test
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-console-producer.bat --bootstrap-server localhost:9092 --topic test
+>hello
+>Hi
+>q^Q
+>^CTerminate batch job (Y/N)? y
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+hello
+Hi
+q◄
+^CTerminate batch job (Y/N)? Processed a total of 3 messages
+y
+
+E:\Softwares\kafka_2.12-3.3.1\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic author-bookupdate-topic --from-beginning
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=96, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=6, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=101, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=false, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]
+Book [id=105, tittle=Do Good Be good, category=Learn Valus, price=140000.0, authorName=Ramaraju, publisher=Ram Publicashion, publishedDate=2022-08-02, content=Change the life of leving, active=true, authorDetails=AuthorDetails [authId=7, authorName=Ramaraju]]

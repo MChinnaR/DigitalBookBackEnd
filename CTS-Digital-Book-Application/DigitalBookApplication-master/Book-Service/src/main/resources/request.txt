@@ -1,0 +1,5 @@
+http://localhost:8999/api/v1/digitalbook/12309/book/29
+
+http://localhost:8999/api/v1/digitalbook/12309/book/
+
+http://localhost:8999/api/v1/digitalbook/book/search/Learn Valus/140000/Ramaraju/Ram Publicashion

@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b50b5d23-06a8-4786-b0a6-40db90b177cc",
+		"name": "Reader Servise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetBooks From Book Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/digitalbook/reader/book/search/Learn Valus/150000/Ramaraju/Ram Publicashion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"reader",
+						"book",
+						"search",
+						"Learn Valus",
+						"150000",
+						"Ramaraju",
+						"Ram Publicashion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy A Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": " Ramarao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ramarao@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "tittle",
+							"value": "Do Good Be good",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Learn Valus",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "150000",
+							"type": "text"
+						},
+						{
+							"key": "authorName",
+							"value": "Ramaraju",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Ram Publicashion",
+							"type": "text"
+						},
+						{
+							"key": "publisherDate",
+							"value": "2022-08-02",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Change the life of leving",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/digitalbook/reader/books/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"reader",
+						"books",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SubscribtionBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/digitalbook/reader/ramarao@gmail.com/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"digitalbook",
+						"reader",
+						"ramarao@gmail.com",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
